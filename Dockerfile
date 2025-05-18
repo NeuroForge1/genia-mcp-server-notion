@@ -10,10 +10,10 @@ COPY . .
 RUN npm install
 
 # Compilar la aplicación
-RUN npm run build || echo "Build command may not be necessary, continuing..."
+RUN npm run build
 
 # Exponer el puerto que utiliza la aplicación
 EXPOSE 8000
 
 # Comando para iniciar el servicio
-CMD ["node", "dist/index.js"]
+CMD ["npm", "start"]
